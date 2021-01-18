@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataHendlerService} from '../../service/data-hendler.service';
+import {Category} from '../../model/Category';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories: Category[];
 
+  constructor(private dataHendler: DataHendlerService) {
+
+  }
+
+// Метод створюється автоматично після створення компонента
   ngOnInit(): void {
+    this.categories = this.dataHendler.getCategories();
+    console.log(this.categories);
   }
 
 }
