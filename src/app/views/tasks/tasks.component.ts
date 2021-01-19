@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {DataHendlerService} from '../../service/data-hendler.service';
+// @ts-ignore
 import {Task} from '../model/Task';
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',

@@ -18,7 +18,9 @@ export class CategoriesComponent implements OnInit {
 // Метод створюється автоматично після створення компонента
   ngOnInit(): void {
     this.categories = this.dataHendler.getCategories();
-    console.log(this.categories);
   }
-
+  // tslint:disable-next-line:typedef
+  showTasksByCategory(category: Category){
+  this.dataHendler.getTasksByCategory(category);
+  }
 }
