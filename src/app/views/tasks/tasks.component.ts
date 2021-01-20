@@ -13,7 +13,7 @@ export class TasksComponent implements OnInit {
   constructor(private dataHendler: DataHendlerService) { }
 
   ngOnInit(): void {
-    this.tasks = this.dataHendler.getTasks();
+   this.dataHendler.tasksSubject.subscribe(tasks => this.tasks = tasks);
   }
 
 }

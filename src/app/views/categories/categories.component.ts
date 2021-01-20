@@ -15,12 +15,12 @@ export class CategoriesComponent implements OnInit {
 
   }
 
-// Метод створюється автоматично після створення компонента
-  ngOnInit(): void {
+// метод вызывается автоматически после инициализации компонента
+  ngOnInit() {
     this.categories = this.dataHendler.getCategories();
   }
   // tslint:disable-next-line:typedef
   showTasksByCategory(category: Category){
-  this.dataHendler.getTasksByCategory(category);
+  this.dataHendler.fillTasksByCategory(category);
   }
 }
